@@ -1,0 +1,836 @@
+﻿
+@{
+    ViewBag.Title = "RentalRates";
+    
+    
+}
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","Rental")">Select a mission</a></li>
+    <li class="active">@ViewBag.MissionName</li>
+</ol>
+<div class="jumbotron" style="background-image: @ViewBag.MissionFlag"; background-size: cover">
+    <h1>@ViewBag.MissionName</h1>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div>
+        <p>Mission Flag</p>
+            <img style="width:100%; height:250px;" src="@ViewBag.MissionFlag" class="img-rounded" /></div>
+    </div>
+    <div class="col-md-8">
+        <div>
+            <p></p>
+            <p>Name: @ViewBag.MissionName</p>
+            <p>President: @ViewBag.MPName</p>
+            <p>Language: @ViewBag.Language</p>
+            <p>Climate: @ViewBag.Climate</p>
+            <p>Dominate Religon: @ViewBag.DRel</p>
+            
+          
+        </div>
+     </div>
+</div>
+
+
+<hr />
+<div class="container">
+    <div class="panel-group" id="accordion">
+        <div style="font-size:large;" class="faqHeader"><strong>General questions</strong></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Who should serve a mission?</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    President Thomas S. Monson said: “We affirm that missionary work is a priesthood duty—and we encourage all 
+                    young men who are worthy and who are physically able and mentally capable to respond to the call to serve. 
+                    Many young women also serve, but they are not under the same mandate to serve as are the young men. We assure the young 
+                    sisters of the Church, however, that they make a valuable contribution as missionaries, and we welcome their service.” 
+                    (Thomas S. Monson, "Welcome to Conference," Liahona, November 2012, 4).
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal0">Answer</button>
+
+                    <!-- Modal -->
+                    <div id="myModal0" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>	
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">I have many questions about missionary service. Who can best answer them?</a>
+                </h4>
+            </div>
+            <div id="collapseTen" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Talk with your parents, priesthood leaders, or a trusted leader to 
+                    help you find answers to your questions. Preach My Gospel and the Missionary Handbook 
+                    are also great resources. 
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal1">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal1" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">How are missionaries called?</a>
+                </h4>
+            </div>
+            <div id="collapseEleven" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Every missionary who is called and assigned or reassigned to a particular mission is called by revelation through the Lord's servants, the prophets. A member of the Quorum of the Twelve assigns prospective missionaries to one of more than three hundred missions of the Church. 
+                    Learn more by reading “The Divine Call of a Missionary,” Elder Ronald A. Rasband's April 2010 general conference address. 
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal2">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal2" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div style="font-size:large;" class="faqHeader"><strong>Preparation</strong></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">How do I start the recommendation process?</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    To start the recommendation process, first meet with your bishop or 
+                    branch president. He will give you access to the Missionary Online Recommendation system. 
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal3">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal3" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">When should I begin my missionary service?</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    President Thomas S. Monson said: “All worthy and able young men who have graduated from high school 
+                    or its equivalent, regardless of where they live, will have the option of being recommended for missionary 
+                    service beginning at the age of 18, instead of age 19. I am not suggesting that all young men will—or should—serve at this earlier age. Rather, based on individual circumstances as well as upon a determination by priesthood leaders, this option is now available.
+                    “As we have prayerfully pondered the age at which young men may begin their missionary service, we have also 
+                    given consideration to the age at which a young woman might serve. Today I am pleased to announce that able, 
+                    worthy young women who have the desire to serve may be recommended for missionary service beginning at age 19, instead of age 21.
+                    “We affirm that missionary work is a priesthood duty—and we encourage all young men who are worthy and who are 
+                    physically able and mentally capable to respond to the call to serve. Many young women also serve, but they are not 
+                    under the same mandate to serve as are the young men.” (Thomas S. Monson, "Welcome to Conference," Liahona, November 2012, 4).
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal4">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal4" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How early can I submit my missionary papers?</a>
+                </h4>
+            </div>
+            <div id="collapseFive" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Recommendation papers for full-time service may be submitted to Church headquarters by a 
+                    prospective missionary’s stake president 120 days prior to his or her availability date. Availability date is 
+                    the earliest date at which the prospective missionary is available to begin his or her mission. The earliest date 
+                    young men may enter the MTC is after graduating from high school or its equivalent and reaching 18 years of age. The 
+                    earliest date women may enter the MTC is after their 19th birthday. Other influences on one's availability date may include 
+                    completing a university semester, finishing an employment commitment, or stabilizing a medical condition. Speak with your priesthood 
+                    leaders well before the 120 day submission window to start the recommendation process and to confirm your availability date. 
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal5">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal5" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">With the increase in the number of missionaries, will it take longer to receive my call?</a>
+                </h4>
+            </div>
+            <div id="collapseSix" class="panel-collapse collapse">
+                <div class="panel-body">
+                    No. Although the number of missionaries has increased, it will not take 
+                    longer than normal to receive your call. Generally, you may receive your 
+                    call between two to three weeks once your papers are submitted by your stake 
+                    president and processed by the Missionary Department. Bishops and stake presidents 
+                    can view the status of each recommendation online. 
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal6">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal6" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">How do I know if I am worthy and able to serve a mission?</a>
+                </h4>
+            </div>
+            <div id="collapseEight" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Whether you have concerns about your worthiness or physical or emotional limitations, 
+                    you should visit with your bishop or branch president. He will help you understand the eligibility requirements for missionary service. 
+                    See also “Preparation Brings Blessings,” one of President Thomas S. Monson's April 2010 general conference addresses. 
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal7">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal7" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">How can I best prepare spiritually to be a missionary?</a>
+                </h4>
+            </div>
+            <div id="collapseNine" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Work on strengthening your own understanding and testimony of the gospel by praying daily and studying the scriptures, 
+                    especially the Book of Mormon. Attend your Church meetings. Participate in seminary or institute, if available. You may share 
+                    the gospel with a friend, go to teaching appointments with the full-time missionaries, or ask recently returned missionaries about their 
+                    experiences in the mission field. You may also become familiar with Preach My Gospel, especially chapters 1 and 3. For additional counsel on 
+                    your preparation, see a recent interview with Brother David L. Beck, Young Men general president. 
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal8">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal8" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div style ="font-size:large;" class="faqHeader"><strong>Miscellaneous</strong></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">What is a typical day for a missionary like?</a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                    A missionary's day is filled with activities that help accomplish 
+                    the missionary purpose of bringing souls to Christ. Read the “Missionary Daily Schedule” to 
+                    see the activities in a typical day, and study the lessons in chapter 3 of Preach My Gospel to 
+                    find what missionaries teach. One way to understand day-to-day missionary activities is to watch The District. 
+                    These video segments show real missionaries, members, and investigators in non-scripted, unrehearsed, actual missionary situations.
+                    <br />
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal9">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal9" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">How will I communicate with family and friends?</a>
+                </h4>
+            </div>
+            <div id="collapseSeven" class="panel-collapse collapse">
+                <div class="panel-body">
+                    As a missionary you may communicate with your family and friends through letters and email 
+                    on preparation day. You may also call home on Christmas and one other time during the year (usually Mother's Day). 
+                    For more information on communicating with family and friends, see page 20 of the Missionary Handbook.
+                    <br />           
+                    <button style="float:right;" class="btn btn-default" data-toggle="modal" data-target="#myModal10">Answer</button>
+                    <!-- Modal -->
+                    <div id="myModal10" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Answer questions!</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+
+                                        <div class="form-group">
+                                            <!-- Name field -->
+                                            <label class="control-label " for="name">Name</label>
+                                            <input class="form-control" id="name" name="name" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Email field -->
+                                            <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                                            <input class="form-control" id="email" name="email" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Subject field -->
+                                            <label class="control-label " for="subject">Answer</label>
+                                            <input class="form-control" id="subject" name="subject" type="text" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Message field -->
+                                            <label class="control-label " for="message">Message</label>
+                                            <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+<hr />
+<div class="row">
+<div class="col-md-4">
+</div>
+ <div class="col-md-4">
+
+     <h2>Have a Question?<br />Get answers! </h2>
+    
+<p>Fill out the form below</p>
+<form>
+
+    <div class="form-group">
+        <!-- Name field -->
+        <label class="control-label " for="name">Name</label>
+        <input class="form-control" id="name" name="name" type="text" />
+    </div>
+
+    <div class="form-group">
+        <!-- Email field -->
+        <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+        <input class="form-control" id="email" name="email" type="text" />
+    </div>
+
+    <div class="form-group">
+        <!-- Subject field -->
+        <label class="control-label " for="subject">Subject</label>
+        <input class="form-control" id="subject" name="subject" type="text" />
+    </div>
+
+    <div class="form-group">
+        <!-- Message field -->
+        <label class="control-label " for="message">Question</label>
+        <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary " name="submit" type="submit">Ask</button>
+    </div>
+
+</form>	
+     </div>
+<div class="col-md-4">
+</div>
+</div>

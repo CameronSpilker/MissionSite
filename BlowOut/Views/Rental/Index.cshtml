@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Home")">Home</a></li>
+    <li><a href="@Url.Action("Index","Rental")">Select a mission</a></li>
+    <li class="active">@ViewBag.MissionName/li>
+</ol>
+<div class="jumbotron" style="background-image: url(../../Content/Images/world-map.png); background-size: cover">
+    <h1>Missions</h1>
+    <p class="lead">Look through our large variety of different missions below!</p>
+</div>
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Missions
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("RentalRates", "Rental", new {MisName = "Ark", Mission = "Mission" }, null)">Arkansas Little Rock Mission</a></li>
+        <li><a href="@Url.Action("RentalRates", "Rental", new {MisName = "DR", Mission = "Mission" }, null)">Dominican Republic Santiago Mission</a></li>
+        <li><a href="@Url.Action("RentalRates", "Rental", new {MisName = "Cal", Mission = "Mission" }, null)">California Long Beach Mission</a></li>
+    </ul>
+</div>

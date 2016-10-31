@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+        
+}
+<h2>Contact us easily below</h2>
+<address>
+    One Mission Site Way<br />
+    Provo, UT 84601-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@missionsite.com">Support@missionsite.com</a><br />
+</address>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+
+        <h2>Have a Question?<br />Get answers! </h2>
+
+        <p>Fill out the form below</p>
+        <form>
+
+            <div class="form-group">
+                <!-- Name field -->
+                <label class="control-label " for="name">Name</label>
+                <input class="form-control" id="name" name="name" type="text" />
+            </div>
+
+            <div class="form-group">
+                <!-- Email field -->
+                <label class="control-label requiredField" for="email">Email<span class="asteriskField">*</span></label>
+                <input class="form-control" id="email" name="email" type="text" />
+            </div>
+
+            <div class="form-group">
+                <!-- Subject field -->
+                <label class="control-label " for="subject">Subjects</label>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Select
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("Index", "Contact", new {MissionName = "Ark" }, null)">Arkansas Little Rock Mission</a></li>
+                        <li><a href="@Url.Action("Index", "Contact", new {MissionName = "DR"}, null)">Dominican Republic Santiago Mission</a></li>
+                        <li><a href="@Url.Action("Index", "Contact", new {MissionName = "Cal"}, null)">California Long Beach Mission</a></li>
+                    </ul>
+                    You have selected @ViewBag.Drop
+                </div>
+            </div>
+
+            <div class="form-group">
+                <!-- Message field -->
+                <label class="control-label " for="message">Question</label>
+                <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+ 
