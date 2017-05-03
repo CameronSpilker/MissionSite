@@ -1,4 +1,4 @@
-Missionary Website -- A website for future missionaries to learn more about missions.
+Missionary Website -- A website for future and returned missionaries to learn more about their missions.
 
 Homepage has a inspriational video about missionary work
 Currently has three missions to choose from, which shows basic mission information
@@ -14,3 +14,9 @@ Choosing different missions and viewing information
 <br>
 <br>
 <img src="https://cloud.githubusercontent.com/assets/22181707/25670793/11c78da4-2feb-11e7-892f-b7e329296179.gif"/>
+<br>
+<br>
+Users can create an account, log in, and ask/answer questions about a specific mission
+<br>
+<br>
+<img src="https://cloud.githubusercontent.com/assets/22181707/25673276/0167bc28-2ff4-11e7-8834-4b5d04d3420b.gif"/>
