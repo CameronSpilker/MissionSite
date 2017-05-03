@@ -1,4 +1,4 @@
-Missionary Website -- A website for future and returned missionaries to learn more about their missions.
+## Missionary Website -- A website for future and returned missionaries to learn more about their missions.
 
 * Homepage has a inspriational video about missionary work
 * Currently has three missions to choose from, which shows basic mission information
