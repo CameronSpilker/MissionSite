@@ -2,7 +2,8 @@ Missionary Website -- A website for future and returned missionaries to learn mo
 
 Homepage has a inspriational video about missionary work
 Currently has three missions to choose from, which shows basic mission information
-FAQ page for users who are logged in, they can ask and answer questions about each mission
+Users can create an account to use the FAQ
+FAQ page for users who are logged in, they can ask or answer questions about each mission
 
 Homepage with video
 <br>
