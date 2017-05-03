@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "MissionSelectFAQ";
+}
+@*//user selects mission*@
+<div class="jumbotron" style="background-image: url(../../Content/Images/world-map.png); background-size: cover">
+    <h1>Missions Select FAQ</h1>
+    <p class="lead">Select a mission you would like to view Frequent Asked Questions!</p>
+</div>
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Missions
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("FAQ", "Home", new {missionid = 1}, null)">Arkansas Little Rock Mission</a></li>
+        <li><a href="@Url.Action("FAQ", "Home", new {missionid = 17}, null)">Dominican Republic Santiago Mission</a></li>
+        <li><a href="@Url.Action("FAQ", "Home", new {missionid = 18}, null)">California Long Beach Mission</a></li>
+    </ul>
+</div>

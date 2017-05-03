@@ -13,11 +13,11 @@ namespace BlowOut
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-                routes.MapRoute(
-                name: "Email",
-                url: "{controller}/{action}/{Name}/{Email}",
-                defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional }
-            );
+            //    routes.MapRoute(
+            //    name: "Email",
+            //    url: "{controller}/{action}/{Name}/{Email}",
+            //    defaults: new { controller = "Contact", action = "Index", id = UrlParameter.Optional }
+            //);
 
                 routes.MapRoute(
                     name: "Default",

@@ -40,7 +40,7 @@ namespace BlowOut.Controllers
                 ViewBag.Maddress = "Av. Estrella Sadhala Plaza Alejo 2-B, Santiago, Dominican Republic";
                 ViewBag.MPName = "President John L. Douglas";
                 ViewBag.Language = "Spanish";
-                ViewBag.Climate = "Beautiful tropical weather all year round";
+                ViewBag.Climate = "Beautiful Tropical weather all year round";
                 ViewBag.DRel = "Catholic";
             
             }
